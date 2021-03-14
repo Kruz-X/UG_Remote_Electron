@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="AZBToN8gMko8-yUUIvx0wmfKRNgbJSgXfl6S35OUyyE" name="google-site-verification" />
+  <link as="style" href="https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css"
+    onload="this.onload=null;this.rel='stylesheet'" rel="preload">
+  <noscript>
+    <link href="https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css" rel="stylesheet">
+  </noscript>
+  <link href="icon.png" rel="icon" type="image/png" />
+
+  <title>UG_Remote</title>
+
+  <style type="text/css">
+    .container {
+      padding: 20px 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="ui placeholder segment">
+      <div class="ui two column very relaxed stackable grid">
+        <div class="column">
+          <div class="ui form">
+            <div class="field">
+              <label>Address</label>
+              <div class="ui selection dropdown" style="z-index: 99;">
+                <input type="hidden" name="address">
+                <i class="dropdown icon" onclick="chooseConnect('show', 'address')"></i>
+                <div class="default text" id="pop-up-display-address">race</div>
+                <div class="menu" id="pop-up-menu-address" style="display: none">
+                  <div class="item" data-value="1" id="add-0" onclick="chooseConnect('add-0', 'address')">Chink</div>
+                  <div class="item" data-value="0" id="add-1" onclick="chooseConnect('add-1', 'address')">Nigger</div>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label>Username</label>
+              <div class="ui left icon input">
+                <input type="text" placeholder="Username">
+                <i class="user icon"></i>
+              </div>
+            </div>
+            <div class="field">
+              <label>Password</label>
+              <div class="ui left icon input">
+                <input type="password" placeholder="Password">
+                <i class="lock icon"></i>
+              </div>
+            </div>
+            <div class="ui blue submit button">Login</div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="ui form">
+            <div class="field" style="height: 61px;">
+              <label>Reset VNC</label>
+              <div class="ui slider checkbox" style="margin-top: 12px; margin-bottom: 6px">
+                <input type="checkbox" name="newsletter">
+                <label>Reset the VNC</label>
+              </div>
+            </div>
+            <div class="field">
+              <label>New Password</label>
+              <div class="ui left icon input">
+                <input type="text" placeholder="Type your new password">
+                <i class="lock icon"></i>
+              </div>
+            </div>
+            <div class="field">
+              <label>Select Port</label>
+              <div class="ui selection dropdown" style="z-index: 99;">
+                <input type="hidden" name="port">
+                <i class="dropdown icon" onclick="chooseConnect('show', 'port')"></i>
+                <div class="default text" id="pop-up-display-port">Choose a port</div>
+                <div class="menu" id="pop-up-menu-port" style="display: none">
+                  <div class="item" data-value="1" id="port-0" onclick="chooseConnect('port-0', 'port')">38</div>
+                  <div class="item" data-value="0" id="port-1" onclick="chooseConnect('port-1', 'port')">69</div>
+                </div>
+              </div>
+            </div>
+            <div class="ui submit button">Load</div>
+          </div>
+        </div>
+      </div>
+      <div class="ui vertical divider">
+        UG Remote
+      </div>
+      </div>
+    </div>
+    <script>
+      function chooseConnect(type, selector) {
+        const currentSelector = document.getElementById(`pop-up-menu-${selector}`);
+        console.log(type, currentSelector.style.display);
+        if (type === 'show') {
+          if (currentSelector.style.display === 'none') {
+            currentSelector.style.display = 'block';
+          } else {
+            currentSelector.style.display = 'none'
+          }
+        } else {
+          const target = document.getElementById(type);
+          document.getElementById(`pop-up-display-${selector}`).innerHTML = target.innerHTML;
+          currentSelector.style.display = 'none';
+        }
+      }
+    </script>
+    <script async defer src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script async defer src="https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>
